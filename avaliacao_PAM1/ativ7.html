@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Caixa alta</title>
+</head>
+<body>
+    
+    Escreva algo: <input type="text" id="fnome2">
+
+    <script>
+        document.getElementById("fnome2").onchange = function() {change()};
+
+        function change() {
+            var x = document.getElementById("fnome2");
+            x.value = x.value.toUpperCase();
+        }
+
+    </script>
+
+</body>
+</html>

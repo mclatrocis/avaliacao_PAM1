@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tipos de funções</title>
+</head>
+<body>
+
+    <p id="demo"></p>
+    <p id="construct"></p>
+    <button id="literal">Função Literal</button>
+    <p id="arrow"></p>
+
+
+    <script>
+        //funçao nomeada
+        function btnAlert1() {
+            
+        }
+
+        //função Nomeada com argumento(parametro) e retorno
+        function add(p1, p2) {
+            return p1 + p2;
+        }
+
+        let result = add(5, 5);
+        document.getElementById("demo").innerHTML = result;
+
+        //função constructor
+        function carro(nome, marca, ano, cor) {
+            this.vnome = nome;
+            this.vmarca = marca;
+            this.vano = ano;
+            this.vcor = cor;
+        }
+
+        const meuCarro = new carro("Palio", "Fiat", 1999, "prata");
+
+        document.getElementById("construct").innerHTML =
+        "Meu carro é um " + meuCarro.vnome + " " + meuCarro.vano + "."; 
+
+        //função literal
+        let funcaoLiteral = document.getElementById("literal");
+
+        funcaoLiteral.onclick = function(){
+            alert("Função literal");
+        }
+
+        //Arrow fucntion
+        let myFunction = (a, b) => a + b;
+        document.getElementById("arrow").innerHTML = myFunction(5, 5);
+
+    </script>
+</body>
+</html>

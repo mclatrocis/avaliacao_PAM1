@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events</title>
+</head>
+<body>
+    
+    <h1 id="over">Coloque o mouse aqui!</h1>
+
+    Insira seu nome: <input type="text" id="fnome"><br>
+
+    Insira seu nome: <input type="text" id="fnome2">
+
+    <script>
+        document.getElementById("over").onmouseover = function() {mouseOver()};
+        document.getElementById("over").onmouseout = function() {mouseOut()};
+
+        function mouseOver() {
+        document.getElementById("over").style.color = "red";
+        }
+
+        function mouseOut() {
+        document.getElementById("over").style.color = "black";
+        }
+
+        document.getElementById("fnome").onfocus = function() {focus()};
+
+        function focus() {
+        document.getElementById("fnome").style.backgroundColor = "red";
+        }
+
+        document.getElementById("fnome2").onchange = function() {change()};
+
+        function change() {
+        document.getElementById("fnome2").style.color = "red";
+        }
+    </script>
+</body>
+</html>
